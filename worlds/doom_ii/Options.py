@@ -40,6 +40,7 @@ class RandomMonsters(Choice):
     option_shuffle = 1
     option_random_balanced = 2
     option_random_chaotic = 3
+    option_random_biased = 4
     default = 2
 
 
