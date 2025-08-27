@@ -1082,6 +1082,18 @@ item_table: Dict[int, ItemDict] = {
              'doom_type': 65004,
              'episode': -1,
              'map': -1},
+    360900: {'classification': ItemClassification.trap,
+             'count': 0,
+             'name': 'Archvile Trap',
+             'doom_type': 65900,
+             'episode': -1,
+             'map': -1},
+    360901: {'classification': ItemClassification.trap,
+             'count': 0,
+             'name': 'Revenant Trap',
+             'doom_type': 65901,
+             'episode': -1,
+             'map': -1},
 }
 
 
@@ -1091,5 +1103,6 @@ item_name_groups: Dict[str, Set[str]] = {
     'Keys': {"Barrels o' Fun (MAP23) - Yellow skull key", 'Bloodfalls (MAP25) - Blue skull key', 'Circle of Death (MAP11) - Blue keycard', 'Circle of Death (MAP11) - Red keycard', 'Downtown (MAP13) - Blue keycard', 'Downtown (MAP13) - Red keycard', 'Downtown (MAP13) - Yellow keycard', 'Industrial Zone (MAP15) - Blue keycard', 'Industrial Zone (MAP15) - Red keycard', 'Industrial Zone (MAP15) - Yellow keycard', 'Monster Condo (MAP27) - Blue skull key', 'Monster Condo (MAP27) - Red skull key', 'Monster Condo (MAP27) - Yellow skull key', 'Nirvana (MAP21) - Blue skull key', 'Nirvana (MAP21) - Red skull key', 'Nirvana (MAP21) - Yellow skull key', 'Refueling Base (MAP10) - Blue keycard', 'Refueling Base (MAP10) - Yellow keycard', 'Suburbs (MAP16) - Blue skull key', 'Suburbs (MAP16) - Red skull key', 'Tenements (MAP17) - Blue keycard', 'Tenements (MAP17) - Red keycard', 'Tenements (MAP17) - Yellow skull key', 'The Abandoned Mines (MAP26) - Blue keycard', 'The Abandoned Mines (MAP26) - Red keycard', 'The Abandoned Mines (MAP26) - Yellow keycard', 'The Catacombs (MAP22) - Blue skull key', 'The Catacombs (MAP22) - Red skull key', 'The Chasm (MAP24) - Blue keycard', 'The Chasm (MAP24) - Red keycard', 'The Citadel (MAP19) - Blue skull key', 'The Citadel (MAP19) - Red skull key', 'The Citadel (MAP19) - Yellow skull key', 'The Courtyard (MAP18) - Blue skull key', 'The Courtyard (MAP18) - Yellow skull key', 'The Crusher (MAP06) - Blue keycard', 'The Crusher (MAP06) - Red keycard', 'The Crusher (MAP06) - Yellow keycard', 'The Factory (MAP12) - Blue keycard', 'The Factory (MAP12) - Yellow keycard', 'The Focus (MAP04) - Blue keycard', 'The Focus (MAP04) - Red keycard', 'The Focus (MAP04) - Yellow keycard', 'The Gantlet (MAP03) - Blue keycard', 'The Gantlet (MAP03) - Red keycard', 'The Inmost Dens (MAP14) - Blue skull key', 'The Inmost Dens (MAP14) - Red skull key', 'The Pit (MAP09) - Blue keycard', 'The Pit (MAP09) - Yellow keycard', 'The Spirit World (MAP28) - Red skull key', 'The Spirit World (MAP28) - Yellow skull key', 'The Waste Tunnels (MAP05) - Blue keycard', 'The Waste Tunnels (MAP05) - Red keycard', 'The Waste Tunnels (MAP05) - Yellow keycard', 'Tricks and Traps (MAP08) - Red skull key', 'Tricks and Traps (MAP08) - Yellow skull key', 'Underhalls (MAP02) - Blue keycard', 'Underhalls (MAP02) - Red keycard', },
     'Levels': {"Barrels o' Fun (MAP23)", 'Bloodfalls (MAP25)', 'Circle of Death (MAP11)', 'Dead Simple (MAP07)', 'Downtown (MAP13)', 'Entryway (MAP01)', 'Gotcha! (MAP20)', 'Grosse (MAP32)', 'Icon of Sin (MAP30)', 'Industrial Zone (MAP15)', 'Monster Condo (MAP27)', 'Nirvana (MAP21)', 'Refueling Base (MAP10)', 'Suburbs (MAP16)', 'Tenements (MAP17)', 'The Abandoned Mines (MAP26)', 'The Catacombs (MAP22)', 'The Chasm (MAP24)', 'The Citadel (MAP19)', 'The Courtyard (MAP18)', 'The Crusher (MAP06)', 'The Factory (MAP12)', 'The Focus (MAP04)', 'The Gantlet (MAP03)', 'The Inmost Dens (MAP14)', 'The Living End (MAP29)', 'The Pit (MAP09)', 'The Spirit World (MAP28)', 'The Waste Tunnels (MAP05)', 'Tricks and Traps (MAP08)', 'Underhalls (MAP02)', 'Wolfenstein (MAP31)', },
     'Powerups': {'Armor', 'Berserk', 'Invulnerability', 'Mega Armor', 'Megasphere', 'Partial invisibility', 'Supercharge', },
+    'Traps': {'Archvile Trap', 'Revenant Trap', },
     'Weapons': {'BFG9000', 'Chaingun', 'Chainsaw', 'Plasma gun', 'Rocket launcher', 'Shotgun', 'Super Shotgun', },
 }

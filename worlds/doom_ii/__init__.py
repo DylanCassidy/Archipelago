@@ -66,12 +66,9 @@ class DOOM2World(World):
         "Invulnerability": 10,
         "Partial invisibility": 18,
         "Supercharge": 26,
-        "Medikit": 15,
-        "Box of bullets": 13,
-        "Box of rockets": 13,
-        "Box of shotgun shells": 13,
-        "Energy cell pack": 10,
-        "Megasphere": 7
+        "Megasphere": 7,
+        "Archvile Trap": 6,
+        "Revenant Trap": 10
     }
 
     def __init__(self, multiworld: MultiWorld, player: int):
@@ -252,6 +249,8 @@ class DOOM2World(World):
         self.create_ratioed_items("Partial invisibility", itempool)
         self.create_ratioed_items("Supercharge", itempool)
         self.create_ratioed_items("Megasphere", itempool)
+        self.create_ratioed_items("Archvile Trap", itempool)
+        self.create_ratioed_items("Revenant Trap", itempool)
 
         while len(itempool) < self.location_count:
             itempool.append(self.create_item(self.get_filler_item_name()))
