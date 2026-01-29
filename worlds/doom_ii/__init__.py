@@ -5,7 +5,7 @@ from typing import Any, Dict, List
 from BaseClasses import Entrance, CollectionState, Item, Location, MultiWorld, Region, Tutorial
 from worlds.AutoWorld import WebWorld, World
 from . import Items, Locations, Maps, Regions, Rules
-from .Options import DOOM2Options
+from .Options import DOOM2Options, option_groups
 
 logger = logging.getLogger("DOOM II")
 
@@ -31,6 +31,7 @@ class DOOM2Web(WebWorld):
         ["Daivuk"]
     )]
     theme = "dirt"
+    option_groups = option_groups
 
 
 class DOOM2World(World):
@@ -100,6 +101,10 @@ class DOOM2World(World):
         if self.get_episode_count() == 1 and self.included_episodes[2]:
             early_weapon = self.random.choice(["Super Shotgun", "Plasma gun"])
             self.multiworld.early_items[self.player][early_weapon] = 1
+
+        # override with our options
+        self.items_ratio["Archvile Trap"] = self.options.archvile_traps
+        self.items_ratio["Revenant Trap"] = self.options.revenant_traps
 
     def create_regions(self):
         pro = self.options.pro.value
