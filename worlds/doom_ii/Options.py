@@ -1,6 +1,6 @@
 import typing
 
-from Options import PerGameCommonOptions, Range, Choice, Toggle, DeathLink, DefaultOnToggle, StartInventoryPool
+from Options import PerGameCommonOptions, Range, Choice, Toggle, DeathLink, DefaultOnToggle, StartInventoryPool, OptionGroup
 from dataclasses import dataclass
 
 
@@ -215,6 +215,24 @@ class AddedAmmoEnergyCells(Range):
     default = 300
 
 
+class ArchvileTrapCount(Range):
+    """Sets the number of Archvile traps that will appear in the item pool.
+    When this trap is triggered, 1 Archvile will spawn somewhere in the current map."""
+    display_name = "Archvile Traps"
+    range_start = 0
+    range_end = 24
+    default = 6
+
+
+class RevenantTrapCount(Range):
+    """Sets the number of Revenant traps that will appear in the item pool.
+    When this trap is triggered, 4 Revenants will spawn together somewhere in the current map."""
+    display_name = "Revenant Traps"
+    range_start = 0
+    range_end = 40
+    default = 10
+
+
 @dataclass
 class DOOM2Options(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
@@ -243,3 +261,16 @@ class DOOM2Options(PerGameCommonOptions):
     added_ammo_shells: AddedAmmoShells
     added_ammo_rockets: AddedAmmoRockets
     added_ammo_energy_cells: AddedAmmoEnergyCells
+
+    archvile_traps: ArchvileTrapCount
+    revenant_traps: RevenantTrapCount
+
+option_groups: list[OptionGroup] = [
+    OptionGroup(
+        "Traps",
+        [
+            ArchvileTrapCount,
+            RevenantTrapCount
+        ]
+    )
+]
